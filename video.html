@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Grid</title>
+    <style>
+        /* Reset some default styles for the HTML elements */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the image grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Gap between images */
+    padding: 20px; /* Padding around the grid */
+}
+
+/* Style the individual images */
+.image {
+    border-radius: 10px; /* Rounded corners for images */
+    overflow: hidden; /* Hide overflowing content (for images with different dimensions) */
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s ease; /* Add a transition for hover effect */
+}
+
+/* Hover effect for images */
+.image:hover img {
+    transform: scale(1.1); /* Enlarge the image on hover */
+}
+
+    </style>
+</head>
+<body>
+    <div class="image-grid">
+        <div class="image">
+            <img src="image1.jpg" alt="Image 1">
+        </div>
+        <div class="image">
+            <img src="image2.jpg" alt="Image 2">
+        </div>
+        <div class="image">
+            <img src="image3.jpg" alt="Image 3">
+        </div>
+        <!-- Add more image elements as needed -->
+    </div>
+</body>
+</html>

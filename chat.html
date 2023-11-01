@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+</head>
+<body>
+    <h1>Video Player</h1>
+
+    <!-- Video container -->
+    <div id="video-container"></div>
+
+    <script>
+        // Video sources
+        const videoSources = [
+            'video1.mp4',
+            'video2.mp4',
+            // Add more video URLs here
+        ];
+
+        // Create a video player for each video source
+        videoSources.forEach((source, index) => {
+            const videoContainer = document.getElementById('video-container');
+            const videoElement = document.createElement('video');
+            videoElement.src = source;
+            videoElement.controls = true;
+            videoElement.preload = 'auto';
+            videoElement.id = `video-${index}`;
+
+            const videoTitle = document.createElement('h3');
+            videoTitle.textContent = `Video ${index + 1}`;
+
+            videoContainer.appendChild(videoTitle);
+            videoContainer.appendChild(videoElement);
+        });
+    </script>
+</body>
+</html>
